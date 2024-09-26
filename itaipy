@@ -1,0 +1,21 @@
+class Product:
+    def __init__(self, name, price, date):
+        self.name = name
+        self.price = price
+        self.date = date
+
+class store():
+    def __init__(self):
+        self.products = []
+    def add_product(self, p):
+        self.products.append(p)s
+    def remove_product(self, p):
+        self.products.remove(p)
+
+
+s = store()
+table = Product('Tabel', 150, "12/12/2019")
+chair = Product('chair', 30, "12/12/2018")
+s.add_product(table)
+s.add_product(chair)
+print(s.products)

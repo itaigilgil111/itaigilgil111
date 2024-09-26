@@ -1,0 +1,12 @@
+def get_volume(hight, width, length):
+    c = Cube
+    c.hight = hight
+    c.width = width
+    c.length = length
+
+    return hight * width * length
+
+
+my_cube = get_volume(20, 10, 5)
+print(my_cube)
+

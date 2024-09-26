@@ -19,26 +19,3 @@ chair = Product('chair', 30, "12/12/2018")
 s.add_product(table)
 s.add_product(chair)
 print(s.products)
-99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
-
-class Person:
-    name = None
-    age = None
-    id = None
-    gender = None
-
-
-def create_person(name, age, id , gender):
-    p = Person
-    p.name = name
-    p.age = age
-    p.id = id
-    p.gender = gender
-
-    return p
-
-
-mr_gilboa = create_person("itai", 13, 371828, "male")
-
-print(mr_gilboa.name, mr_gilboa.id)
-print(mr_gilboa)

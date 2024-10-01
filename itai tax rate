@@ -1,0 +1,37 @@
+def get_tax_rate(location):
+    # Example tax rates based on location
+    tax_rates = {
+        "isreal": 0.18, #18 tax rate
+        "UK": 0.25,   # 25% tax rate
+        "Germany": 0.30,  # 30% tax rate
+        "Canada": 0.15,  # 15% tax rate
+        "Australia": 0.18  # 18% tax rate
+    }
+    # Default to a 10% tax rate if the location is not listed
+    return tax_rates.get(location, 0.10)
+
+
+def calculate_final_salary(salary, location):
+    tax_rate = get_tax_rate(location)
+    tax_amount = salary * tax_rate
+    final_salary = salary - tax_amount
+    return final_salary, tax_amount
+
+
+def main():
+    # Get user input
+    salary = float(input("Please enter your salary: "))
+    location = input("Please enter your location (e.g., USA, UK, Germany): ")
+
+    # Calculate the final salary and tax amount
+    final_salary, tax_amount = calculate_final_salary(salary, location)
+
+    # Display the result
+    print(f"Based on a {location} tax rate of {tax_amount / salary * 100:.2f}%,")
+    print(f"your salary after tax is: {final_salary:.2f} (Tax deducted: {tax_amount:.2f})")
+
+
+# Run the program
+if __name__ == "__main__":
+    main()
+#the main way to use the ip and the locc is by adding sn ip adrexs tracker
